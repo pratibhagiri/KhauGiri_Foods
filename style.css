@@ -1,0 +1,74 @@
+/* Style for each food card */
+.food-card {
+  min-width: 160px;
+  flex-shrink: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.food-card p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.quantity button {
+  padding: 6px 12px;
+  font-size: 16px;
+}
+
+/* Horizontal scroll container */
+.overflow-auto {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+/* Cart modal responsiveness */
+.qr-placeholder {
+  font-weight: bold;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .food-card {
+    min-width: 130px;
+    padding: 8px;
+  }
+
+  .quantity button {
+    padding: 4px 10px;
+  }
+
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  #viewCartBtn {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .modal-content {
+    font-size: 14px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+}
