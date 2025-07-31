@@ -78,7 +78,7 @@ const categories = [
 
     document.getElementById("whatsappBtn").addEventListener("click", function (e) {
       e.preventDefault();
-      const whatsappNumber = "919876543210";
+      const whatsappNumber = "919763925360";
       let message = "🛒 *New Order from Khaugiri Foods*:\n\n";
       let total = 0;
       let hasItems = false;
