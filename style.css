@@ -1,21 +1,31 @@
-/* Style for each food card */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(2px);
+}
 .food-card {
   min-width: 160px;
-  flex-shrink: 0;
   background-color: #fff;
   border-radius: 10px;
   padding: 10px;
   margin-right: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   text-align: center;
+  transition: transform 0.2s ease;
 }
-
+.food-card:hover {
+  transform: translateY(-5px);
+}
+.food-card img {
+  border-radius: 8px;
+  object-fit: cover;
+}
 .food-card p {
   margin: 0;
   font-size: 14px;
   font-weight: 500;
 }
-
 .quantity {
   display: flex;
   justify-content: center;
@@ -23,51 +33,43 @@
   gap: 8px;
   margin-top: 10px;
 }
-
 .quantity button {
   padding: 6px 12px;
   font-size: 16px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  border-radius: 5px;
 }
-
-/* Horizontal scroll container */
 .overflow-auto {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
+  padding-bottom: 10px;
 }
-
-/* Cart modal responsiveness */
 .qr-placeholder {
-  font-weight: bold;
-  height: 150px;
+  background-color: #fefefe;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px dashed #ccc;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
-
 @media (max-width: 600px) {
   .food-card {
     min-width: 130px;
-    padding: 8px;
   }
-
-  .quantity button {
-    padding: 4px 10px;
-  }
-
   .navbar-brand {
     font-size: 18px;
   }
-
   #viewCartBtn {
     font-size: 14px;
     padding: 6px 10px;
   }
-
   .modal-content {
     font-size: 14px;
   }
-
   h4 {
     font-size: 18px;
   }
