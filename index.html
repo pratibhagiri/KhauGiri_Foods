@@ -7,35 +7,34 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body style="background-image: url('background.jpg'); background-size: cover; background-attachment: fixed;">
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-success px-3 py-2">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success px-3 py-2 shadow">
     <a class="navbar-brand fw-bold" href="#">🍴 Khaugiri</a>
     <button class="btn btn-light ms-auto" id="viewCartBtn">View Cart</button>
   </nav>
 
-  <div class="container my-4" id="menuContainer">
-    <!-- Food categories will be dynamically inserted here -->
-  </div>
+  <div class="container my-4" id="menuContainer"></div>
 
-  <!-- Cart Modal -->
   <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content p-3">
+      <div class="modal-content p-3 rounded shadow">
         <div class="modal-header">
-          <h5 class="modal-title">Your Cart</h5>
+          <h5 class="modal-title">Place Order</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
           <div id="cartItems"></div>
-          <p id="totalAmount">Total: ₹0</p>
-          <div class="qr-placeholder border border-dark text-center py-4">Scan QR to Pay (UPI)</div>
-          <p><strong>Pay UPI ID:</strong> khaugiri@upi</p>
-         
-<div class="d-grid gap-2">
-  <a href="#" id="whatsappBtn" target="_blank" class="btn btn-success">Send Order via WhatsApp</a>
-</div>
+          <p id="totalAmount" class="fw-bold fs-5">Total: ₹0</p>
+          <p class="text-center"><strong>Scan QR to Pay</strong></p>
+          <div class="qr-placeholder text-center py-4">
+            <img src="upi.png" alt="UPI QR Code" style="max-width: 200px; height: auto;" />
+          </div>
+          <p class="text-center mt-3"><strong>UPI ID:</strong> khaugiri@upi</p>
+          <p class="text-muted text-center">#############################</p>
+          <div class="d-grid gap-2">
+            <a href="#" id="whatsappBtn" target="_blank" class="btn btn-success">Send Order via WhatsApp</a>
+          </div>
         </div>
       </div>
     </div>
