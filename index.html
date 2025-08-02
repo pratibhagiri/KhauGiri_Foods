@@ -9,45 +9,48 @@
 </head>
 <body style="background-image: url('background.jpg'); background-size: cover; background-attachment: fixed;">
 
- <nav class="navbar navbar-expand-lg navbar-dark bg-success px-3 py-2">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success px-3 py-2">
   <div class="d-flex align-items-center">
     <img src="img.jpg" alt="Khaugiri Logo" width="60" height="60" class="me-2" />
     <div class="d-flex flex-column">
-      <span class="fs-5 fw-bold text-white"><strong>Khaugiri</strong></span>
+      <span class="fs-5 fw-bold text-white">Khaugiri</span>
       <small class="text-white">Pure Veg Restaurant</small>
     </div>
   </div>
   <button class="btn btn-light ms-auto" id="viewCartBtn">View Cart</button>
 </nav>
 
+<!-- Menu -->
+<div class="container my-4" id="menuContainer"></div>
 
-  <div class="container my-4" id="menuContainer"></div>
-
-  <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content p-3 rounded shadow">
-        <div class="modal-header">
-          <h5 class="modal-title">Place Order</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+<!-- Cart Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content p-3 rounded shadow">
+      <div class="modal-header">
+        <h5 class="modal-title">Place Order</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="max-height: 70vh; overflow-y: auto;">
+        <div id="cartItems"></div>
+        <p id="totalAmount" class="fw-bold fs-5">Total: ₹0</p>
+        <p class="text-center"><strong>Scan QR to Pay</strong></p>
+        <div class="qr-placeholder text-center py-4">
+          <img src="upi.png" alt="UPI QR Code" style="max-width: 200px; height: auto;" />
         </div>
-        <div class="modal-body">
-          <div id="cartItems"></div>
-          <p id="totalAmount" class="fw-bold fs-5">Total: ₹0</p>
-          <p class="text-center"><strong>Scan QR to Pay</strong></p>
-          <div class="qr-placeholder text-center py-4">
-            <img src="upi.png" alt="UPI QR Code" style="max-width: 200px; height: auto;" />
-          </div>
-          <p class="text-center mt-3"><strong>UPI ID:</strong> khaugiri@upi</p>
-          <p class="text-muted text-center">#############################</p>
-          <div class="d-grid gap-2">
-            <a href="#" id="whatsappBtn" target="_blank" class="btn btn-success">Send Order via WhatsApp</a>
-          </div>
-        </div>
+        <p class="text-center mt-3"><strong>UPI ID:</strong> khaugiri@upi</p>
+        <p class="text-muted text-center">#############################</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#" id="whatsappBtn" target="_blank" class="btn btn-success w-100">Send Order via WhatsApp</a>
       </div>
     </div>
   </div>
+</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
